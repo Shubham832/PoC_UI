@@ -1,0 +1,28 @@
+<div class="content">
+  <div class="login">
+    <p style="text-align: center; font-size: x-large; color: gray">Sign in</p>
+    <div class="box">
+      <form name="loginForm" ng-submit="loginUser()" novalidate>
+        <span>Enter email</span>
+        <input
+          type="email"
+          placeholder=" Enter your email id"
+          ng-model="user.email"
+          ng-required="true"
+        />
+        <span>Password</span>
+        <input
+          type="password"
+          placeholder=" Enter your password"
+          ng-model="user.password"
+          ng-required="true"
+        />
+        <input type="submit" value="Sign in" class="button1" />
+      </form>
+    </div>
+    <div class="box" style="text-align: center">
+      New ?
+      <span><a href="#/register">create an account.</a></span>
+    </div>
+  </div>
+</div>

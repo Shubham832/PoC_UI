@@ -1,0 +1,82 @@
+<div class="login">
+  <p style="text-align: center; font-size: x-large; color: gray">Sign Up</p>
+
+  <div class="box">
+    <form name="registrationForm" ng-submit="addUser()" novalidate>
+      <input
+        type="text"
+        placeholder="First name"
+        ng-model="user.fname"
+        ng-required="true"
+      />
+      <input
+        type="text"
+        placeholder="Last name"
+        ng-model="user.lname"
+        ng-required="true"
+      />
+
+      <input
+        type="email"
+        placeholder="Email"
+        ng-model="user.email"
+        ng-required="true"
+      />
+      <div
+        ng-show="registrationForm.email.$touched && registrationForm.email.$invalid"
+      >
+        <small style="color: red; display: block; text-align: center">
+          Enter a valid email
+        </small>
+      </div>
+      <input
+        type="text"
+        placeholder="Phone"
+        ng-model="user.phone"
+        ng-required="true"
+      />
+      <div
+        ng-show="registrationForm.phone.$touched && registrationForm.phone.$invalid"
+      >
+        <small style="color: red; display: block; text-align: center">
+          Enter a valid phone
+        </small>
+      </div>
+      <input
+        type="text"
+        placeholder="Address"
+        ng-model="user.address.address1"
+        ng-required="true"
+      />
+      <input
+        type="text"
+        placeholder="City"
+        ng-model="user.address.city"
+        ng-required="true"
+      />
+      <input
+        type="text"
+        placeholder="State"
+        ng-model="user.address.state"
+        ng-required="true"
+      />
+      <input
+        type="text"
+        placeholder="Country"
+        ng-model="user.address.country"
+        ng-required="true"
+      />
+      <input
+        type="text"
+        placeholder="Postal code"
+        ng-model="user.address.postalCode"
+        ng-required="true"
+      />
+      <input
+        type="submit"
+        value="REGISTER"
+        ng-disabled="registrationForm.$invalid"
+      />
+    </form>
+  </div>
+</div>
